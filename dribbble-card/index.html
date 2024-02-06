@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <div class="card-body">
+    <img src="https://th.bing.com/th/id/OIG3.qA0k1ZXKp.QQjXjdM_cC?w=1024&h=1024&rs=1&pid=ImgDetMain"
+      alt="Concentric circles dark geometric">
+    <div class="gradient-box"></div>
+    <div class="body-copy">
+      <h2 class="heading">SOC 2 Compliance</h2>
+      <p>Our product meets SOC 2 standards for secure handling of sensitive information</p>
+    </div>
+  </div>
+
+  <style>
+    :root {
+      --border: 2px;
+    }
+
+    body {
+      margin: 0;
+      font-family: sans-serif;
+      background-color: black;
+      padding: 2rem;
+    }
+
+    .card-body {
+      width: 300px;
+      border-radius: 2rem;
+      overflow: hidden;
+      position: relative;
+
+      background: #000;
+      background-clip: padding-box;
+
+      transition: all 0.1s ease;
+
+      img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+      }
+
+      .gradient-box {
+        position: absolute;
+        top: var(--border);
+        left: var(--border);
+        width: calc(100% - (2 * var(--border)));
+        height: 200px;
+        z-index: 1;
+        border-radius: calc(2rem - var(--border)) calc(2rem - var(--border)) 0 0;
+        background: radial-gradient(circle, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 40%, rgba(0, 0, 0, 1) 70%);
+      }
+
+      .body-copy {
+        padding: 2rem;
+
+        .heading {
+          color: white;
+          margin: 0;
+        }
+
+        p {
+          color: #9e9da0;
+          margin-bottom: 0;
+        }
+      }
+    }
+
+    .card-body::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      border-radius: 2rem;
+      padding: var(--border);
+      /* control the border thickness */
+      background: linear-gradient(135deg, #343338, #17161b);
+      -webkit-mask:
+        linear-gradient(#000 0 0) content-box,
+        linear-gradient(#000 0 0);
+      -webkit-mask-composite: xor;
+      mask-composite: exclude;
+      pointer-events: none;
+    }
+
+    .card-body:hover {
+      scale: 1.1;
+    }
+  </style>
+
+  <script>
+    // document.addEventListener("mousemove", (evt) => { console.log(evt) })
+  </script>
+</body>
+
+</html>
