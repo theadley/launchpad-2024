@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Web Components</title>
+  <script type="module" src="./progress-bar.js"></script>
+</head>
+
+<body>
+  <!-- <div id="app"></div>
+  <script type="module" src="/main.js"></script> -->
+  <progress-bar percent="0">0%</progress-bar>
+
+  <script>
+    const progressInstance = document.querySelector('progress-bar');
+    let percentage = 0;
+    const intervalInstance = setInterval(() => {
+      percentage += 10;
+      progressInstance.setAttribute('percent', percentage);
+      progressInstance.innerHTML = `${percentage}%`;
+
+      if (percentage >= 100) {
+        clearInterval(intervalInstance);
+      }
+    }, 1000);
+  </script>
+</body>
+
+</html>
