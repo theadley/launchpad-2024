@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <h1>Hello F1</h1>
+
+  <script>
+    fetch("http://ergast.com/api/f1/2023/1/results.json")
+      .then(response => response.json())
+      .then(jsonResponse => {
+        // Guard Clause
+        if (
+          !(
+            jsonResponse?.MRData?.RaceTable?.Races?.[0]?.Results &&
+            jsonResponse?.MRData?.RaceTable?.Races?.[0]?.date &&
+            jsonResponse?.MRData?.RaceTable?.Races?.[0]?.raceName
+          )
+        ) {
+          throw new Error('Test catch?')
+        }
+
+        document.querySelector('body').style.fontFamily = 'sans-serif';
+
+        document.querySelector('h1').innerText = `${jsonResponse.MRData.RaceTable.Races[0].raceName} • ${jsonResponse.MRData.RaceTable.Races[0].date}`;
+
+        const listOfResults = document.createElement('ol');
+
+        const results = jsonResponse.MRData.RaceTable.Races[0].Results
+
+        console.log(results);
+
+        // 1. Max Verstappen - Red Bull (1:20:32.604) - Fastest Lap: 01:20.123 (avg 204kph)
+        for (let result of results) {
+          let listItemContent = '';
+          if (result?.Driver?.familyName && result?.Driver?.givenName) {
+            listItemContent += `${result.Driver.givenName} ${result.Driver.familyName} - `;
+          }
+          if (result?.Constructor?.name) {
+            listItemContent += result.Constructor.name + ' ';
+          }
+          if (result?.Time?.time) {
+            listItemContent += `(${result.Time.time}) - `;
+          } else if (result?.status) {
+            listItemContent += `(${result.status}) - `;
+          }
+          if (result?.FastestLap?.AverageSpeed?.speed && result?.FastestLap?.AverageSpeed?.units && result?.FastestLap?.Time?.time) {
+            listItemContent += `Fastest Lap: ${result.FastestLap.Time.time} (avg ${result.FastestLap.AverageSpeed.speed}${result.FastestLap.AverageSpeed.units})`;
+          }
+
+          const resultListItem = document.createElement('li');
+          resultListItem.innerText = listItemContent;
+          listOfResults.appendChild(resultListItem);
+        }
+
+        document.querySelector('body').appendChild(listOfResults);
+
+
+      })
+      .catch(error => console.error(error))
+      .finally(() => console.log('The network call has been finalised'));
+
+    // async function getData() {
+    //   const response = await fetch("http://ergast.com/api/f1/2023/1/results.json")
+    //   if (response.ok) {
+    //     const jsonResponse = await response.json();
+    //     if (!jsonResponse.error) {
+    //       console.log(jsonResponse)
+    //     } else {
+    //       console.error(jsonResponse.error);
+    //     }
+    //   } else {
+    //     console.error(response.error);
+    //   }
+    // }
+
+    // getData();
+
+    // fetch('https://opensky-network.org/api/states/all?time=1458564121&icao24=3c6444')
+    //   .then(response => response.json())
+    //   .then(json => console.log(json))
+    //   .catch(err => console.error(err))
+    //   .finally(() => console.log('Done'));
+  </script>
+</body>
+
+</html>
