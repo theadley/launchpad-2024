@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <p>You clicked: 0 times</p>
+  <button>Click Me</button>
+
+  <script>
+    let clickCount = 0;
+    const button = document.querySelector('button');
+
+    function handleClick() {
+      clickCount++;
+      document.querySelector('p').innerText = `You clicked: ${clickCount} time${clickCount !== 1 ? 's' : ''}`
+      button.removeEventListener("click", handleClick);
+    }
+
+    button.addEventListener("click", handleClick);
+
+  </script>
+</body>
+
+</html>

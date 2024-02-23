@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    const nums = [1, 2, 3, 4, 5, 6, 7, 88, 67];
+
+    function handleClick(event, num) {
+      console.log(event, num);
+    }
+
+    for (let i of nums) {
+      const button = document.createElement('button');
+      button.innerText = `Button ${i}`;
+      button.setAttribute('data-number', i);
+      button.addEventListener('click', (event) => handleClick(event, i));
+      document.querySelector('body').appendChild(button);
+    }
+  </script>
+</body>
+
+</html>
