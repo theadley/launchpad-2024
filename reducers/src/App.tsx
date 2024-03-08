@@ -1,64 +1,40 @@
-import { useReducer } from 'react';
+import { useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 import './App.css';
 import Seasons from './Seasons';
-import { StateContext, StateDispatchContext } from './contexts';
-import {
-  AnyAction,
-  SelectRoundAction,
-  SelectSeasonAction,
-  UpdateSeasonRaceResultsAction,
-  UpdateSeasonRacesAction,
-  UpdateSeasonsAction,
-} from './models/actions';
-import { State } from './models/state';
-
-function reduce(state: State, action: AnyAction): State {
-  console.log(state, action);
-  switch (action.type) {
-    case 'UpdateSeasons':
-      return { ...state, seasons: (action as UpdateSeasonsAction).seasons };
-    case 'SelectSeason':
-      return {
-        ...state,
-        selectedSeason: (action as SelectSeasonAction).season,
-      };
-    case 'UpdateSeasonRaces':
-      return {
-        ...state,
-        seasonRaces: (action as UpdateSeasonRacesAction).races,
-      };
-    case 'SelectRound':
-      return {
-        ...state,
-        selectedRound: (action as SelectRoundAction).round,
-      };
-    case 'UpdateSeasonRaceResults':
-      return {
-        ...state,
-        results: (action as UpdateSeasonRaceResultsAction).results,
-      };
-    default:
-      return state;
-  }
-}
-
-const initialState: State = {
-  seasons: [],
-  seasonRaces: [],
-  results: [],
-};
+import { selectRound, selectSeason } from './state/features/formula1/f1Slice';
+import { RootState } from './state/store';
 
 function App() {
-  const [state, dispatch] = useReducer(reduce, initialState);
+  const dispatch = useDispatch();
+  const selectedSeason = useSelector(
+    (state: RootState) => state.formula1.selectedSeason
+  );
+  const selectedRound = useSelector(
+    (state: RootState) => state.formula1.selectedRound
+  );
+
+  useEffect(() => {
+    const selectedSeason = localStorage.getItem('selectedSeason');
+    const selectedRound = localStorage.getItem('selectedRound');
+
+    if (selectedSeason?.length) {
+      dispatch(selectSeason(selectedSeason));
+    }
+    if (selectedRound?.length) {
+      dispatch(selectRound(selectedRound));
+    }
+  }, []);
+
+  useEffect(() => {
+    localStorage.setItem('selectedSeason', selectedSeason ?? '');
+    localStorage.setItem('selectedRound', selectedRound ?? '');
+  }, [selectedSeason, selectedRound]);
 
   return (
     <>
-      <StateContext.Provider value={state}>
-        <StateDispatchContext.Provider value={dispatch}>
-          <h1>Hello Reduce</h1>
-          <Seasons />
-        </StateDispatchContext.Provider>
-      </StateContext.Provider>
+      <h1>Hello Reduce</h1>
+      <Seasons />
     </>
   );
 }

@@ -103,10 +103,10 @@ export interface AverageSpeed {
   speed: string
 }
 
-export interface State {
-  seasons: Season[];
+export interface Formula1State {
+  // seasons: Season[];
   selectedSeason?: string;
-  seasonRaces: Race[];
+  // seasonRaces: Race[];
   selectedRound?: string;
-  results: Result[];
+  // results: Result[];
 }

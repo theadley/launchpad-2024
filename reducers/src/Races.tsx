@@ -1,53 +1,38 @@
-import { useContext, useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 import Results from './Results';
-import { StateContext, StateDispatchContext } from './contexts';
-import { SelectRoundAction, UpdateSeasonRacesAction } from './models/actions';
-import { RacesAPIResponse } from './models/state';
+import { useGetRacesQuery } from './services/api';
+import { selectRound } from './state/features/formula1/f1Slice';
+import { RootState } from './state/store';
 
 const Races = () => {
-  const state = useContext(StateContext);
-  const dispatch = useContext(StateDispatchContext);
-
-  useEffect(() => {
-    fetch(`https://ergast.com/api/f1/${state?.selectedSeason}.json`)
-      .then((res) => res.json())
-      .then((jsonRes: RacesAPIResponse) => {
-        const action: UpdateSeasonRacesAction = {
-          type: 'UpdateSeasonRaces',
-          races: jsonRes.MRData.RaceTable.Races,
-        };
-
-        if (dispatch) dispatch(action);
-      })
-      .catch((err) => console.error(err));
-  }, [dispatch, state?.selectedSeason]);
-
-  const selectRound = (round: string) => {
-    const action: SelectRoundAction = {
-      type: 'SelectRound',
-      round,
-    };
-
-    if (dispatch) dispatch(action);
-  };
+  const dispatch = useDispatch();
+  const selectedSeason = useSelector(
+    (state: RootState) => state.formula1.selectedSeason
+  );
+  const selectedRound = useSelector(
+    (state: RootState) => state.formula1.selectedRound
+  );
+  const { data: Races } = useGetRacesQuery(selectedSeason ?? '', {
+    skip: !selectedSeason,
+  });
 
   return (
     <>
       <select
         name='Round'
-        onChange={(event) => selectRound(event.target.value)}>
+        onChange={(event) => dispatch(selectRound(event.target.value))}>
         {/* Deconstruct "Race" into its parts and take only "round" */}
-        {state?.seasonRaces?.map(({ round }) => (
+        {Races?.map(({ round, raceName }) => (
           <option
             value={round}
             key={round}>
-            {round}
+            {round}: {raceName}
           </option>
         ))}
       </select>
 
       <br />
-      {state?.selectedRound && <Results />}
+      {selectedRound && <Results />}
     </>
   );
 };

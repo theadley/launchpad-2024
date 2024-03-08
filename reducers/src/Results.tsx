@@ -1,57 +1,84 @@
-import { useContext, useEffect } from 'react';
-import { StateContext, StateDispatchContext } from './contexts';
-import { UpdateSeasonRaceResultsAction } from './models/actions';
-import { RacesAPIResponse, Result } from './models/state';
+import { useSelector } from 'react-redux';
+import { useGetResultsQuery } from './services/api';
+import { RootState } from './state/store';
 
 const Results = () => {
-  const state = useContext(StateContext);
-  const dispatch = useContext(StateDispatchContext);
+  const selectedSeason = useSelector(
+    (state: RootState) => state.formula1.selectedSeason
+  );
+  const selectedRound = useSelector(
+    (state: RootState) => state.formula1.selectedRound
+  );
+  const { data: Results } = useGetResultsQuery(
+    { season: selectedSeason ?? '', round: selectedRound ?? '' },
+    {
+      skip: !selectedRound || !selectedSeason,
+    }
+  );
 
-  useEffect(() => {
-    fetch(
-      `https://ergast.com/api/f1/${state?.selectedSeason}/${state?.selectedRound}/results.json`
-    )
-      .then((res) => res.json())
-      .then((jsonRes: RacesAPIResponse) => {
-        const action: UpdateSeasonRaceResultsAction = {
-          type: 'UpdateSeasonRaceResults',
-          results: jsonRes.MRData.RaceTable.Races?.[0]?.Results ?? [],
-        };
-
-        if (dispatch) dispatch(action);
-      })
-      .catch((err) => console.error(err));
-  }, [dispatch, state?.selectedSeason, state?.selectedRound]);
-
-  const resultToListItem = (result: Result) => {
-    let listItemContent = '';
-    if (result?.Driver?.familyName && result?.Driver?.givenName) {
-      listItemContent += `${result.Driver.givenName} ${result.Driver.familyName} - `;
-    }
-    if (result?.Constructor?.name) {
-      listItemContent += result.Constructor.name + ' ';
-    }
-    if (result?.Time?.time) {
-      listItemContent += `(${result.Time.time}) - `;
-    } else if (result?.status) {
-      listItemContent += `(${result.status}) - `;
-    }
-    if (
-      result?.FastestLap?.AverageSpeed?.speed &&
-      result?.FastestLap?.AverageSpeed?.units &&
-      result?.FastestLap?.Time?.time
-    ) {
-      listItemContent += `Fastest Lap: ${result.FastestLap.Time.time} (avg ${result.FastestLap.AverageSpeed.speed}${result.FastestLap.AverageSpeed.units})`;
-    }
-    return listItemContent;
-  };
+  // const resultToListItem = (result: Result) => {
+  //   let listItemContent = '';
+  //   if (result?.Driver?.familyName && result?.Driver?.givenName) {
+  //     listItemContent += `${result.Driver.givenName} ${result.Driver.familyName} - `;
+  //   }
+  //   if (result?.Constructor?.name) {
+  //     listItemContent += result.Constructor.name + ' ';
+  //   }
+  //   if (result?.Time?.time) {
+  //     listItemContent += `(${result.Time.time}) - `;
+  //   } else if (result?.status) {
+  //     listItemContent += `(${result.status}) - `;
+  //   }
+  //   if (
+  //     result?.FastestLap?.AverageSpeed?.speed &&
+  //     result?.FastestLap?.AverageSpeed?.units &&
+  //     result?.FastestLap?.Time?.time
+  //   ) {
+  //     listItemContent += `Fastest Lap: ${result.FastestLap.Time.time} (avg ${result.FastestLap.AverageSpeed.speed}${result.FastestLap.AverageSpeed.units})`;
+  //   }
+  //   return listItemContent;
+  // };
 
   return (
-    <ul>
-      {state?.results.map((result) => (
-        <li>{resultToListItem(result)}</li>
-      ))}
-    </ul>
+    // <ul>
+    //   {Results?.map((result) => (
+    //     <li key={result.position}>{resultToListItem(result)}</li>
+    //   ))}
+    // </ul>
+    <table style={{ textAlign: 'left' }}>
+      <thead>
+        <tr>
+          <th>Driver</th>
+          <th>Constructor</th>
+          <th>Time/Status</th>
+          <th>Fastest Lap</th>
+          <th>Fastest Lap Average Speed</th>
+        </tr>
+      </thead>
+      <tbody>
+        {Results?.map((result) => (
+          <tr key={result.position}>
+            <td>
+              {result?.Driver?.familyName &&
+                result?.Driver?.givenName &&
+                `${result.Driver.givenName} ${result.Driver.familyName}`}
+            </td>
+            <td>{result?.Constructor?.name && result.Constructor.name}</td>
+            <td>
+              {result?.Time?.time ? `${result.Time.time}` : `${result.status}`}
+            </td>
+            <td>
+              {result?.FastestLap?.Time?.time && result.FastestLap.Time.time}
+            </td>
+            <td>
+              {result?.FastestLap?.AverageSpeed?.speed &&
+                result?.FastestLap?.AverageSpeed?.units &&
+                `${result.FastestLap.AverageSpeed.speed}${result.FastestLap.AverageSpeed.units}`}
+            </td>
+          </tr>
+        ))}
+      </tbody>
+    </table>
   );
 };
 
