@@ -16,35 +16,7 @@ const Results = () => {
     }
   );
 
-  // const resultToListItem = (result: Result) => {
-  //   let listItemContent = '';
-  //   if (result?.Driver?.familyName && result?.Driver?.givenName) {
-  //     listItemContent += `${result.Driver.givenName} ${result.Driver.familyName} - `;
-  //   }
-  //   if (result?.Constructor?.name) {
-  //     listItemContent += result.Constructor.name + ' ';
-  //   }
-  //   if (result?.Time?.time) {
-  //     listItemContent += `(${result.Time.time}) - `;
-  //   } else if (result?.status) {
-  //     listItemContent += `(${result.status}) - `;
-  //   }
-  //   if (
-  //     result?.FastestLap?.AverageSpeed?.speed &&
-  //     result?.FastestLap?.AverageSpeed?.units &&
-  //     result?.FastestLap?.Time?.time
-  //   ) {
-  //     listItemContent += `Fastest Lap: ${result.FastestLap.Time.time} (avg ${result.FastestLap.AverageSpeed.speed}${result.FastestLap.AverageSpeed.units})`;
-  //   }
-  //   return listItemContent;
-  // };
-
   return (
-    // <ul>
-    //   {Results?.map((result) => (
-    //     <li key={result.position}>{resultToListItem(result)}</li>
-    //   ))}
-    // </ul>
     <table style={{ textAlign: 'left' }}>
       <thead>
         <tr>

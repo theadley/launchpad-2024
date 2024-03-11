@@ -12,7 +12,7 @@ const Races = () => {
   const selectedRound = useSelector(
     (state: RootState) => state.formula1.selectedRound
   );
-  const { data: Races } = useGetRacesQuery(selectedSeason ?? '', {
+  const { data: races } = useGetRacesQuery(selectedSeason ?? '', {
     skip: !selectedSeason,
   });
 
@@ -22,7 +22,7 @@ const Races = () => {
         name='Round'
         onChange={(event) => dispatch(selectRound(event.target.value))}>
         {/* Deconstruct "Race" into its parts and take only "round" */}
-        {Races?.map(({ round, raceName }) => (
+        {races?.map(({ round, raceName }) => (
           <option
             value={round}
             key={round}>
