@@ -1,0 +1,549 @@
+[
+  {
+    "sha": "240fb6865d7154daaf73c5311b8a1e35d5b913db",
+    "node_id": "C_kwDOLcdu9doAKDI0MGZiNjg2NWQ3MTU0ZGFhZjczYzUzMTFiOGExZTM1ZDViOTEzZGI",
+    "commit": {
+      "author": {
+        "name": "Hugo van Schalkwyk",
+        "email": "hugovans2000@gmail.com",
+        "date": "2024-03-12T06:41:38Z"
+      },
+      "committer": {
+        "name": "Hugo van Schalkwyk",
+        "email": "hugovans2000@gmail.com",
+        "date": "2024-03-12T06:41:38Z"
+      },
+      "message": "feat: :sparkles: Implemented requested changes\n\nAdded tanstack query's devtools and changed the ternary to a shortcircuit.",
+      "tree": {
+        "sha": "d552c67e4f6dfe74f4e92ca39d9f5491c0dbffec",
+        "url": "https://api.github.com/repos/Hugovs2000/React-Project/git/trees/d552c67e4f6dfe74f4e92ca39d9f5491c0dbffec"
+      },
+      "url": "https://api.github.com/repos/Hugovs2000/React-Project/git/commits/240fb6865d7154daaf73c5311b8a1e35d5b913db",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null
+      }
+    },
+    "url": "https://api.github.com/repos/Hugovs2000/React-Project/commits/240fb6865d7154daaf73c5311b8a1e35d5b913db",
+    "html_url": "https://github.com/Hugovs2000/React-Project/commit/240fb6865d7154daaf73c5311b8a1e35d5b913db",
+    "comments_url": "https://api.github.com/repos/Hugovs2000/React-Project/commits/240fb6865d7154daaf73c5311b8a1e35d5b913db/comments",
+    "author": {
+      "login": "Hugovs2000",
+      "id": 90321356,
+      "node_id": "MDQ6VXNlcjkwMzIxMzU2",
+      "avatar_url": "https://avatars.githubusercontent.com/u/90321356?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Hugovs2000",
+      "html_url": "https://github.com/Hugovs2000",
+      "followers_url": "https://api.github.com/users/Hugovs2000/followers",
+      "following_url": "https://api.github.com/users/Hugovs2000/following{/other_user}",
+      "gists_url": "https://api.github.com/users/Hugovs2000/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/Hugovs2000/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/Hugovs2000/subscriptions",
+      "organizations_url": "https://api.github.com/users/Hugovs2000/orgs",
+      "repos_url": "https://api.github.com/users/Hugovs2000/repos",
+      "events_url": "https://api.github.com/users/Hugovs2000/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/Hugovs2000/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "Hugovs2000",
+      "id": 90321356,
+      "node_id": "MDQ6VXNlcjkwMzIxMzU2",
+      "avatar_url": "https://avatars.githubusercontent.com/u/90321356?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Hugovs2000",
+      "html_url": "https://github.com/Hugovs2000",
+      "followers_url": "https://api.github.com/users/Hugovs2000/followers",
+      "following_url": "https://api.github.com/users/Hugovs2000/following{/other_user}",
+      "gists_url": "https://api.github.com/users/Hugovs2000/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/Hugovs2000/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/Hugovs2000/subscriptions",
+      "organizations_url": "https://api.github.com/users/Hugovs2000/orgs",
+      "repos_url": "https://api.github.com/users/Hugovs2000/repos",
+      "events_url": "https://api.github.com/users/Hugovs2000/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/Hugovs2000/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "0c0c24dafabd5373cb96b6cec86ec99b83a8131a",
+        "url": "https://api.github.com/repos/Hugovs2000/React-Project/commits/0c0c24dafabd5373cb96b6cec86ec99b83a8131a",
+        "html_url": "https://github.com/Hugovs2000/React-Project/commit/0c0c24dafabd5373cb96b6cec86ec99b83a8131a"
+      }
+    ]
+  },
+  {
+    "sha": "0c0c24dafabd5373cb96b6cec86ec99b83a8131a",
+    "node_id": "C_kwDOLcdu9doAKDBjMGMyNGRhZmFiZDUzNzNjYjk2YjZjZWM4NmVjOTliODNhODEzMWE",
+    "commit": {
+      "author": {
+        "name": "Hugo van Schalkwyk",
+        "email": "hugovans2000@gmail.com",
+        "date": "2024-03-11T15:17:15Z"
+      },
+      "committer": {
+        "name": "Hugo van Schalkwyk",
+        "email": "hugovans2000@gmail.com",
+        "date": "2024-03-11T15:17:15Z"
+      },
+      "message": "feat: :sparkles: Improved how I do API calls using TanStack Query\n\nI am now making use of tanstack for my api calls and am no longer using redux or rtk. I also implemented interfaces for the api returns and made use of the responses in MainContext to test the calls.",
+      "tree": {
+        "sha": "7bee2e8b99f633c7669aad15c2046dcbe1e01fc5",
+        "url": "https://api.github.com/repos/Hugovs2000/React-Project/git/trees/7bee2e8b99f633c7669aad15c2046dcbe1e01fc5"
+      },
+      "url": "https://api.github.com/repos/Hugovs2000/React-Project/git/commits/0c0c24dafabd5373cb96b6cec86ec99b83a8131a",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null
+      }
+    },
+    "url": "https://api.github.com/repos/Hugovs2000/React-Project/commits/0c0c24dafabd5373cb96b6cec86ec99b83a8131a",
+    "html_url": "https://github.com/Hugovs2000/React-Project/commit/0c0c24dafabd5373cb96b6cec86ec99b83a8131a",
+    "comments_url": "https://api.github.com/repos/Hugovs2000/React-Project/commits/0c0c24dafabd5373cb96b6cec86ec99b83a8131a/comments",
+    "author": {
+      "login": "Hugovs2000",
+      "id": 90321356,
+      "node_id": "MDQ6VXNlcjkwMzIxMzU2",
+      "avatar_url": "https://avatars.githubusercontent.com/u/90321356?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Hugovs2000",
+      "html_url": "https://github.com/Hugovs2000",
+      "followers_url": "https://api.github.com/users/Hugovs2000/followers",
+      "following_url": "https://api.github.com/users/Hugovs2000/following{/other_user}",
+      "gists_url": "https://api.github.com/users/Hugovs2000/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/Hugovs2000/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/Hugovs2000/subscriptions",
+      "organizations_url": "https://api.github.com/users/Hugovs2000/orgs",
+      "repos_url": "https://api.github.com/users/Hugovs2000/repos",
+      "events_url": "https://api.github.com/users/Hugovs2000/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/Hugovs2000/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "Hugovs2000",
+      "id": 90321356,
+      "node_id": "MDQ6VXNlcjkwMzIxMzU2",
+      "avatar_url": "https://avatars.githubusercontent.com/u/90321356?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Hugovs2000",
+      "html_url": "https://github.com/Hugovs2000",
+      "followers_url": "https://api.github.com/users/Hugovs2000/followers",
+      "following_url": "https://api.github.com/users/Hugovs2000/following{/other_user}",
+      "gists_url": "https://api.github.com/users/Hugovs2000/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/Hugovs2000/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/Hugovs2000/subscriptions",
+      "organizations_url": "https://api.github.com/users/Hugovs2000/orgs",
+      "repos_url": "https://api.github.com/users/Hugovs2000/repos",
+      "events_url": "https://api.github.com/users/Hugovs2000/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/Hugovs2000/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "5ea551c2bcf04b6c8ce15384b4ad4a912de65d48",
+        "url": "https://api.github.com/repos/Hugovs2000/React-Project/commits/5ea551c2bcf04b6c8ce15384b4ad4a912de65d48",
+        "html_url": "https://github.com/Hugovs2000/React-Project/commit/5ea551c2bcf04b6c8ce15384b4ad4a912de65d48"
+      }
+    ]
+  },
+  {
+    "sha": "5ea551c2bcf04b6c8ce15384b4ad4a912de65d48",
+    "node_id": "C_kwDOLcdu9doAKDVlYTU1MWMyYmNmMDRiNmM4Y2UxNTM4NGI0YWQ0YTkxMmRlNjVkNDg",
+    "commit": {
+      "author": {
+        "name": "Hugo van Schalkwyk",
+        "email": "hugovans2000@gmail.com",
+        "date": "2024-03-10T13:38:12Z"
+      },
+      "committer": {
+        "name": "Hugo van Schalkwyk",
+        "email": "hugovans2000@gmail.com",
+        "date": "2024-03-10T13:38:12Z"
+      },
+      "message": "feat: :sparkles: First version of API implementation\n\nAttempt at including api's in the project making use of useContext and redux.",
+      "tree": {
+        "sha": "46851bb6503010312304f83393066551a51f60df",
+        "url": "https://api.github.com/repos/Hugovs2000/React-Project/git/trees/46851bb6503010312304f83393066551a51f60df"
+      },
+      "url": "https://api.github.com/repos/Hugovs2000/React-Project/git/commits/5ea551c2bcf04b6c8ce15384b4ad4a912de65d48",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null
+      }
+    },
+    "url": "https://api.github.com/repos/Hugovs2000/React-Project/commits/5ea551c2bcf04b6c8ce15384b4ad4a912de65d48",
+    "html_url": "https://github.com/Hugovs2000/React-Project/commit/5ea551c2bcf04b6c8ce15384b4ad4a912de65d48",
+    "comments_url": "https://api.github.com/repos/Hugovs2000/React-Project/commits/5ea551c2bcf04b6c8ce15384b4ad4a912de65d48/comments",
+    "author": {
+      "login": "Hugovs2000",
+      "id": 90321356,
+      "node_id": "MDQ6VXNlcjkwMzIxMzU2",
+      "avatar_url": "https://avatars.githubusercontent.com/u/90321356?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Hugovs2000",
+      "html_url": "https://github.com/Hugovs2000",
+      "followers_url": "https://api.github.com/users/Hugovs2000/followers",
+      "following_url": "https://api.github.com/users/Hugovs2000/following{/other_user}",
+      "gists_url": "https://api.github.com/users/Hugovs2000/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/Hugovs2000/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/Hugovs2000/subscriptions",
+      "organizations_url": "https://api.github.com/users/Hugovs2000/orgs",
+      "repos_url": "https://api.github.com/users/Hugovs2000/repos",
+      "events_url": "https://api.github.com/users/Hugovs2000/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/Hugovs2000/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "Hugovs2000",
+      "id": 90321356,
+      "node_id": "MDQ6VXNlcjkwMzIxMzU2",
+      "avatar_url": "https://avatars.githubusercontent.com/u/90321356?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Hugovs2000",
+      "html_url": "https://github.com/Hugovs2000",
+      "followers_url": "https://api.github.com/users/Hugovs2000/followers",
+      "following_url": "https://api.github.com/users/Hugovs2000/following{/other_user}",
+      "gists_url": "https://api.github.com/users/Hugovs2000/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/Hugovs2000/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/Hugovs2000/subscriptions",
+      "organizations_url": "https://api.github.com/users/Hugovs2000/orgs",
+      "repos_url": "https://api.github.com/users/Hugovs2000/repos",
+      "events_url": "https://api.github.com/users/Hugovs2000/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/Hugovs2000/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "da223e9e98b24ba767c369d9478ecdf35de01389",
+        "url": "https://api.github.com/repos/Hugovs2000/React-Project/commits/da223e9e98b24ba767c369d9478ecdf35de01389",
+        "html_url": "https://github.com/Hugovs2000/React-Project/commit/da223e9e98b24ba767c369d9478ecdf35de01389"
+      }
+    ]
+  },
+  {
+    "sha": "da223e9e98b24ba767c369d9478ecdf35de01389",
+    "node_id": "C_kwDOLcdu9doAKGRhMjIzZTllOThiMjRiYTc2N2MzNjlkOTQ3OGVjZGYzNWRlMDEzODk",
+    "commit": {
+      "author": {
+        "name": "Hugo van Schalkwyk",
+        "email": "hugovans2000@gmail.com",
+        "date": "2024-03-08T08:58:57Z"
+      },
+      "committer": {
+        "name": "Hugo van Schalkwyk",
+        "email": "hugovans2000@gmail.com",
+        "date": "2024-03-08T08:58:57Z"
+      },
+      "message": "fix: :bug: Completed the setup of main branch\n\nThe main branch is now completely setup for me to now branch off of and start PR's. I did this by finishing the tailwind implementation so that there are no more .css files except for index.css. I also removed unused files along with unused dependencies",
+      "tree": {
+        "sha": "ecbd9ae60102e833f7544fd9725ddb6f81ffc80a",
+        "url": "https://api.github.com/repos/Hugovs2000/React-Project/git/trees/ecbd9ae60102e833f7544fd9725ddb6f81ffc80a"
+      },
+      "url": "https://api.github.com/repos/Hugovs2000/React-Project/git/commits/da223e9e98b24ba767c369d9478ecdf35de01389",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null
+      }
+    },
+    "url": "https://api.github.com/repos/Hugovs2000/React-Project/commits/da223e9e98b24ba767c369d9478ecdf35de01389",
+    "html_url": "https://github.com/Hugovs2000/React-Project/commit/da223e9e98b24ba767c369d9478ecdf35de01389",
+    "comments_url": "https://api.github.com/repos/Hugovs2000/React-Project/commits/da223e9e98b24ba767c369d9478ecdf35de01389/comments",
+    "author": {
+      "login": "Hugovs2000",
+      "id": 90321356,
+      "node_id": "MDQ6VXNlcjkwMzIxMzU2",
+      "avatar_url": "https://avatars.githubusercontent.com/u/90321356?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Hugovs2000",
+      "html_url": "https://github.com/Hugovs2000",
+      "followers_url": "https://api.github.com/users/Hugovs2000/followers",
+      "following_url": "https://api.github.com/users/Hugovs2000/following{/other_user}",
+      "gists_url": "https://api.github.com/users/Hugovs2000/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/Hugovs2000/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/Hugovs2000/subscriptions",
+      "organizations_url": "https://api.github.com/users/Hugovs2000/orgs",
+      "repos_url": "https://api.github.com/users/Hugovs2000/repos",
+      "events_url": "https://api.github.com/users/Hugovs2000/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/Hugovs2000/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "Hugovs2000",
+      "id": 90321356,
+      "node_id": "MDQ6VXNlcjkwMzIxMzU2",
+      "avatar_url": "https://avatars.githubusercontent.com/u/90321356?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Hugovs2000",
+      "html_url": "https://github.com/Hugovs2000",
+      "followers_url": "https://api.github.com/users/Hugovs2000/followers",
+      "following_url": "https://api.github.com/users/Hugovs2000/following{/other_user}",
+      "gists_url": "https://api.github.com/users/Hugovs2000/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/Hugovs2000/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/Hugovs2000/subscriptions",
+      "organizations_url": "https://api.github.com/users/Hugovs2000/orgs",
+      "repos_url": "https://api.github.com/users/Hugovs2000/repos",
+      "events_url": "https://api.github.com/users/Hugovs2000/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/Hugovs2000/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "4e08eb6a7c21eea51793821ed49a9fd1fdf72252",
+        "url": "https://api.github.com/repos/Hugovs2000/React-Project/commits/4e08eb6a7c21eea51793821ed49a9fd1fdf72252",
+        "html_url": "https://github.com/Hugovs2000/React-Project/commit/4e08eb6a7c21eea51793821ed49a9fd1fdf72252"
+      }
+    ]
+  },
+  {
+    "sha": "4e08eb6a7c21eea51793821ed49a9fd1fdf72252",
+    "node_id": "C_kwDOLcdu9doAKDRlMDhlYjZhN2MyMWVlYTUxNzkzODIxZWQ0OWE5ZmQxZmRmNzIyNTI",
+    "commit": {
+      "author": {
+        "name": "Hugo van Schalkwyk",
+        "email": "hugovans2000@gmail.com",
+        "date": "2024-03-08T08:28:48Z"
+      },
+      "committer": {
+        "name": "Hugo van Schalkwyk",
+        "email": "hugovans2000@gmail.com",
+        "date": "2024-03-08T08:28:48Z"
+      },
+      "message": "feat: :sparkles: Setup React project aka ChronicalFrames\n\nSet up the project by installing tailwind as well as daisyUI and set up the base structure for mobile view",
+      "tree": {
+        "sha": "b73f39ae97d1045cb00ba2f8aa70146a8e8dfc27",
+        "url": "https://api.github.com/repos/Hugovs2000/React-Project/git/trees/b73f39ae97d1045cb00ba2f8aa70146a8e8dfc27"
+      },
+      "url": "https://api.github.com/repos/Hugovs2000/React-Project/git/commits/4e08eb6a7c21eea51793821ed49a9fd1fdf72252",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null
+      }
+    },
+    "url": "https://api.github.com/repos/Hugovs2000/React-Project/commits/4e08eb6a7c21eea51793821ed49a9fd1fdf72252",
+    "html_url": "https://github.com/Hugovs2000/React-Project/commit/4e08eb6a7c21eea51793821ed49a9fd1fdf72252",
+    "comments_url": "https://api.github.com/repos/Hugovs2000/React-Project/commits/4e08eb6a7c21eea51793821ed49a9fd1fdf72252/comments",
+    "author": {
+      "login": "Hugovs2000",
+      "id": 90321356,
+      "node_id": "MDQ6VXNlcjkwMzIxMzU2",
+      "avatar_url": "https://avatars.githubusercontent.com/u/90321356?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Hugovs2000",
+      "html_url": "https://github.com/Hugovs2000",
+      "followers_url": "https://api.github.com/users/Hugovs2000/followers",
+      "following_url": "https://api.github.com/users/Hugovs2000/following{/other_user}",
+      "gists_url": "https://api.github.com/users/Hugovs2000/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/Hugovs2000/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/Hugovs2000/subscriptions",
+      "organizations_url": "https://api.github.com/users/Hugovs2000/orgs",
+      "repos_url": "https://api.github.com/users/Hugovs2000/repos",
+      "events_url": "https://api.github.com/users/Hugovs2000/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/Hugovs2000/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "Hugovs2000",
+      "id": 90321356,
+      "node_id": "MDQ6VXNlcjkwMzIxMzU2",
+      "avatar_url": "https://avatars.githubusercontent.com/u/90321356?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Hugovs2000",
+      "html_url": "https://github.com/Hugovs2000",
+      "followers_url": "https://api.github.com/users/Hugovs2000/followers",
+      "following_url": "https://api.github.com/users/Hugovs2000/following{/other_user}",
+      "gists_url": "https://api.github.com/users/Hugovs2000/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/Hugovs2000/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/Hugovs2000/subscriptions",
+      "organizations_url": "https://api.github.com/users/Hugovs2000/orgs",
+      "repos_url": "https://api.github.com/users/Hugovs2000/repos",
+      "events_url": "https://api.github.com/users/Hugovs2000/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/Hugovs2000/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "bb2c8425b7f9c69ff82eb8633325e3fa3076cae0",
+        "url": "https://api.github.com/repos/Hugovs2000/React-Project/commits/bb2c8425b7f9c69ff82eb8633325e3fa3076cae0",
+        "html_url": "https://github.com/Hugovs2000/React-Project/commit/bb2c8425b7f9c69ff82eb8633325e3fa3076cae0"
+      }
+    ]
+  },
+  {
+    "sha": "bb2c8425b7f9c69ff82eb8633325e3fa3076cae0",
+    "node_id": "C_kwDOLcdu9doAKGJiMmM4NDI1YjdmOWM2OWZmODJlYjg2MzMzMjVlM2ZhMzA3NmNhZTA",
+    "commit": {
+      "author": {
+        "name": "Hugo van Schalkwyk",
+        "email": "90321356+Hugovs2000@users.noreply.github.com",
+        "date": "2024-03-06T11:17:33Z"
+      },
+      "committer": {
+        "name": "GitHub",
+        "email": "noreply@github.com",
+        "date": "2024-03-06T11:17:33Z"
+      },
+      "message": "Update README.md",
+      "tree": {
+        "sha": "f9668bcd805e34a392ddf47f2938bcf9e75cd9ef",
+        "url": "https://api.github.com/repos/Hugovs2000/React-Project/git/trees/f9668bcd805e34a392ddf47f2938bcf9e75cd9ef"
+      },
+      "url": "https://api.github.com/repos/Hugovs2000/React-Project/git/commits/bb2c8425b7f9c69ff82eb8633325e3fa3076cae0",
+      "comment_count": 0,
+      "verification": {
+        "verified": true,
+        "reason": "valid",
+        "signature": "-----BEGIN PGP SIGNATURE-----\n\nwsFcBAABCAAQBQJl6FDNCRC1aQ7uu5UhlAAAQq4QAH3sDIlbAbGHLmurl4R19s2n\nshyWTa6QElLN8TjH1K4S7tyI5RWRZSI8r/d+QORNTo8dT7QoSL0/wPsMDTriLesi\nfhVscRzwu6gcbN3LxrKRSDsgO5X9BuCoWa/WeVn7hhhqaePgy6T4WojiM3hKwReS\nGv5AGR0Qkq8L1IRp7DSAAduPM5BTHfHBhe/U56VLjaTWGymCLixhD0Wf3ikQ9OHU\nLQLva4OwODO9+hmWpjjDAtfoL0JSSI8+NfsSQ8RcRZj343KVpQ0IPdlpPvnj9Chb\nyP6iLnr7RzyswjBT1sAv8+YvVe5EHsSwz77USsYH16hr1XJuCi1r8MUpkxfvQW+L\nz/cRxi3OluhlwMHfOIPrlvy67Akfk7OB+iGh4rHoQs6CvcnX04nO/t4bZY7+Mze/\n93G+/xe9zZXhbzxOXBJlZ6w5vS0CdPS49TyIsK//7LIYdChU978FS4cSj8FBKQ7R\ngFjwiBblTMLxrMy9bsaotJjlZBuIEZ9gm1HzKTf3+2miXlwHeHut28KhHKLbwYHh\ntfPVKZ16IUqj1zcmDdfEknY6CmRn4yjutuZ8az20+ELOAN6Sih3nSEtlBCJ2FPX8\nGx/wKS4YHt0c7SpRwsHTDSwW+c2E89SLGighK9fH4j6NlQSgJZbdMANC7wVrHSpJ\n+etZTIsz61aZ3sKJDxuD\n=l6uh\n-----END PGP SIGNATURE-----\n",
+        "payload": "tree f9668bcd805e34a392ddf47f2938bcf9e75cd9ef\nparent 9f5a97c6d0b98163331dab10e254ba1fa782293c\nauthor Hugo van Schalkwyk <90321356+Hugovs2000@users.noreply.github.com> 1709723853 +0200\ncommitter GitHub <noreply@github.com> 1709723853 +0200\n\nUpdate README.md"
+      }
+    },
+    "url": "https://api.github.com/repos/Hugovs2000/React-Project/commits/bb2c8425b7f9c69ff82eb8633325e3fa3076cae0",
+    "html_url": "https://github.com/Hugovs2000/React-Project/commit/bb2c8425b7f9c69ff82eb8633325e3fa3076cae0",
+    "comments_url": "https://api.github.com/repos/Hugovs2000/React-Project/commits/bb2c8425b7f9c69ff82eb8633325e3fa3076cae0/comments",
+    "author": {
+      "login": "Hugovs2000",
+      "id": 90321356,
+      "node_id": "MDQ6VXNlcjkwMzIxMzU2",
+      "avatar_url": "https://avatars.githubusercontent.com/u/90321356?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Hugovs2000",
+      "html_url": "https://github.com/Hugovs2000",
+      "followers_url": "https://api.github.com/users/Hugovs2000/followers",
+      "following_url": "https://api.github.com/users/Hugovs2000/following{/other_user}",
+      "gists_url": "https://api.github.com/users/Hugovs2000/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/Hugovs2000/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/Hugovs2000/subscriptions",
+      "organizations_url": "https://api.github.com/users/Hugovs2000/orgs",
+      "repos_url": "https://api.github.com/users/Hugovs2000/repos",
+      "events_url": "https://api.github.com/users/Hugovs2000/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/Hugovs2000/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "web-flow",
+      "id": 19864447,
+      "node_id": "MDQ6VXNlcjE5ODY0NDQ3",
+      "avatar_url": "https://avatars.githubusercontent.com/u/19864447?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/web-flow",
+      "html_url": "https://github.com/web-flow",
+      "followers_url": "https://api.github.com/users/web-flow/followers",
+      "following_url": "https://api.github.com/users/web-flow/following{/other_user}",
+      "gists_url": "https://api.github.com/users/web-flow/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/web-flow/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/web-flow/subscriptions",
+      "organizations_url": "https://api.github.com/users/web-flow/orgs",
+      "repos_url": "https://api.github.com/users/web-flow/repos",
+      "events_url": "https://api.github.com/users/web-flow/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/web-flow/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "9f5a97c6d0b98163331dab10e254ba1fa782293c",
+        "url": "https://api.github.com/repos/Hugovs2000/React-Project/commits/9f5a97c6d0b98163331dab10e254ba1fa782293c",
+        "html_url": "https://github.com/Hugovs2000/React-Project/commit/9f5a97c6d0b98163331dab10e254ba1fa782293c"
+      }
+    ]
+  },
+  {
+    "sha": "9f5a97c6d0b98163331dab10e254ba1fa782293c",
+    "node_id": "C_kwDOLcdu9doAKDlmNWE5N2M2ZDBiOTgxNjMzMzFkYWIxMGUyNTRiYTFmYTc4MjI5M2M",
+    "commit": {
+      "author": {
+        "name": "Hugo van Schalkwyk",
+        "email": "90321356+Hugovs2000@users.noreply.github.com",
+        "date": "2024-03-06T11:17:17Z"
+      },
+      "committer": {
+        "name": "GitHub",
+        "email": "noreply@github.com",
+        "date": "2024-03-06T11:17:17Z"
+      },
+      "message": "Initial commit",
+      "tree": {
+        "sha": "491231658a572e0098e916c9ba9133ef2b991649",
+        "url": "https://api.github.com/repos/Hugovs2000/React-Project/git/trees/491231658a572e0098e916c9ba9133ef2b991649"
+      },
+      "url": "https://api.github.com/repos/Hugovs2000/React-Project/git/commits/9f5a97c6d0b98163331dab10e254ba1fa782293c",
+      "comment_count": 0,
+      "verification": {
+        "verified": true,
+        "reason": "valid",
+        "signature": "-----BEGIN PGP SIGNATURE-----\n\nwsFcBAABCAAQBQJl6FC9CRC1aQ7uu5UhlAAAtVUQAFERYLMLjGCnHroJ7Po/T9zQ\nw2COsFoT/XboCktDE57VZkrb+epYQkmetiKz2QLo8pOWcichtlCO1EM3Qg8DhNg0\ncqAJkZWCbF3pG8bfXLtX6j7CRqxtknD3bJjF5eEZpilHRqpEGZWG1lZiyOQfB2Rg\nKH9n6apAuxplNG6eEvLdX+EAonrh3wgi1kRUELZTX31OQsLs3R0rqFM6JKaEN+Nb\neLwbQBHW7xC2cOKsiQfioJbYOcOQbJ2fE/fZ9T3R7zCWA5yMRxyp4y9YDO9n3D46\nfXeAzu0aRe8wzFE9KoeoYczvEPTcfgZvXoVplv3QOmkhZbHUanaCcRCTDOn3BUjY\naRkOjLYEav8PfwXRNF6bw1h0YdCYdHZsMoRiJFW7iMorBd6zC4T/2+5PFnljOiH3\n+o7qJUCT14zB2cI5nJ3w0riYHkz0glb+4Tj3ce/XkeMw43eCsfHAl6dPpk1sh4nQ\nOVcjBq6cXlRi4J0kJiTkqbHVEBysbvTl9oOgjRtpTUx9T8C0JHc/lP5TJGDZ3/KI\nt+ZRwXuN5C99Ce2Kmv7o7YUQgWfN6L44yNrg3uu0eGp6d7r8tO+StdFLky1WoCuC\nFX1DYiSFfb5ZUUgH9WgU9Z9PB6DpI7eg1a3VKzb8B/phVZMdygQO4glYxFosjxSX\nHZQTt+6BnT2E61WaMPuD\n=k+4T\n-----END PGP SIGNATURE-----\n",
+        "payload": "tree 491231658a572e0098e916c9ba9133ef2b991649\nauthor Hugo van Schalkwyk <90321356+Hugovs2000@users.noreply.github.com> 1709723837 +0200\ncommitter GitHub <noreply@github.com> 1709723837 +0200\n\nInitial commit"
+      }
+    },
+    "url": "https://api.github.com/repos/Hugovs2000/React-Project/commits/9f5a97c6d0b98163331dab10e254ba1fa782293c",
+    "html_url": "https://github.com/Hugovs2000/React-Project/commit/9f5a97c6d0b98163331dab10e254ba1fa782293c",
+    "comments_url": "https://api.github.com/repos/Hugovs2000/React-Project/commits/9f5a97c6d0b98163331dab10e254ba1fa782293c/comments",
+    "author": {
+      "login": "Hugovs2000",
+      "id": 90321356,
+      "node_id": "MDQ6VXNlcjkwMzIxMzU2",
+      "avatar_url": "https://avatars.githubusercontent.com/u/90321356?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/Hugovs2000",
+      "html_url": "https://github.com/Hugovs2000",
+      "followers_url": "https://api.github.com/users/Hugovs2000/followers",
+      "following_url": "https://api.github.com/users/Hugovs2000/following{/other_user}",
+      "gists_url": "https://api.github.com/users/Hugovs2000/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/Hugovs2000/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/Hugovs2000/subscriptions",
+      "organizations_url": "https://api.github.com/users/Hugovs2000/orgs",
+      "repos_url": "https://api.github.com/users/Hugovs2000/repos",
+      "events_url": "https://api.github.com/users/Hugovs2000/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/Hugovs2000/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "web-flow",
+      "id": 19864447,
+      "node_id": "MDQ6VXNlcjE5ODY0NDQ3",
+      "avatar_url": "https://avatars.githubusercontent.com/u/19864447?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/web-flow",
+      "html_url": "https://github.com/web-flow",
+      "followers_url": "https://api.github.com/users/web-flow/followers",
+      "following_url": "https://api.github.com/users/web-flow/following{/other_user}",
+      "gists_url": "https://api.github.com/users/web-flow/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/web-flow/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/web-flow/subscriptions",
+      "organizations_url": "https://api.github.com/users/web-flow/orgs",
+      "repos_url": "https://api.github.com/users/web-flow/repos",
+      "events_url": "https://api.github.com/users/web-flow/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/web-flow/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "parents": []
+  }
+]
